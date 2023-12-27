@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: '#2A2A40',
+                secondary: '#F55656'
+              }
+            }
+          }
+        }
+    </script>
+    <script src="./js/jquery.js"></script>
+    
+    <title>Portfolio</title>
+</head>
+<body class="h-screen bg-primary">
+    <div id="tabs" class="h-full">
+        <button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+            <span class="sr-only">Open sidebar</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+            </svg>
+        </button>
+         
+        <aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-max h-screen transition-transform -translate-x-full sm:translate-x-0 border-r border-black" aria-label="Sidebar">
+            <div class="h-full px-5 py-4 overflow-y-auto flex items-center flex-col justify-center">
+                <ul class="space-y-2 font-medium text-secondary flex flex-col gap-2 justify-center items-center">
+                    <a href="#home-tab">
+                        <span class="bg-secondary p-2 bg-opacity-25 rounded-md">
+                            <i class="fas fa-house-user text-xl"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="#about-tab">
+                        <span class="p-2 bg-opacity-25 rounded-md">
+                            <i class="fa-solid fa-user text-xl"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="#project-tab">
+                        <span class="p-2 bg-opacity-25 rounded-md">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="#skill-tab">
+                        <span class="p-2 bg-opacity-25 rounded-md">
+                            <i class="fa-solid fa-code-branch"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="#contact-tab">
+                        <span class="p-2 bg-opacity-25 rounded-md">
+                            <i class="fa-solid fa-address-card"></i>
+                        </span>
+                    </a>
+                    
+                </ul>
+            </div>
+        </aside>
+    
+        <main class="p-5 sm:ml-24 h-full">
+            <!-- home tab -->
+            <div id="home-tab" class="tabs h-full flex flex-col md:flex-row gap-2 items-center p-5">
+                <!-- profile -->
+                <div class="w-full h-max md:w-1/2 md:h-full items-center flex">
+                    <div class="relative w-full flex items-center justify-center">
+                        <img class="absolute top-0 right-5 hidden md:block" src="./assets/dots.png" alt="">
+                        <div class="w-52 h-52 lg:h-96 lg:w-96 rounded-full border-4 border-secondary">
+                            <img class="w-full h-full rounded-full grayscale" src="./assets/profile.jpg" alt="">
+                        </div>
+                        <img class="absolute bottom-0 left-0 z-10 hidden md:block" src="./assets/dots.png" alt="">
+                    </div>
+                    
+                </div>
+                <!-- description -->
+                <div class="w-full text-center md:text-start md:w-1/2 text-white md:h-full flex flex-col justify-center p-5">
+                    <h2 class="font-bold text-3xl md:text-6xl">Web and Mobile <br>Developer</h2>
+                    <p class="md:text-2xl md:mt-0 mt-5 text-lg">Hi, I am <span class="font-bold text-secondary">Isagani Lapira Jr</span>
+                        a highly enthusiastic programmer who
+                        like writing codes and creating practical software</p>
+
+                    <!-- social media -->
+                    <div class="flex gap-2 text-white mt-5 justify-center md:justify-start gap-5 items-center h-max text-3xl gap-2">
+                        <a href="https://www.facebook.com/lapiraisagani05">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/isagani-lapira-jr-a5424b223/">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Isagani-lapira">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:lapiraisagani@gmail.com">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- about tab -->
+            <div id="about-tab" class="hidden tabs">about</div>
+            <div id="project-tab" class="hidden tabs">project</div>
+            <div id="skill-tab" class="hidden tabs">skill</div>
+            <div id="contact-tab" class="hidden tabs">contact</div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
