@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script>
         tailwind.config = {
@@ -70,7 +71,7 @@
     
         <main class="p-5 sm:ml-24 h-full">
             <!-- home tab -->
-            <div id="home-tab" class="tabs h-full flex flex-col md:flex-row gap-2 items-center p-5">
+            <div id="home-tab" class="tabs h-full flex flex-col md:flex-row gap-2 items-center p-5 mb-10">
                 <!-- profile -->
                 <div class="w-full h-max md:w-1/2 md:h-full items-center flex">
                     <div class="relative w-full flex items-center justify-center">
@@ -109,10 +110,26 @@
             </div>
 
             <!-- about tab -->
-            <div id="about-tab" class="hidden tabs">about</div>
-            <div id="project-tab" class="hidden tabs">project</div>
-            <div id="skill-tab" class="hidden tabs">skill</div>
-            <div id="contact-tab" class="hidden tabs">contact</div>
+            <div id="about-tab" class="h-full w-full relative">
+                <h2 class="font-bold md:text-4xl text-white"><span class="text-red-400">#</span>About Me</h2>
+
+                <div class="w-full flex">
+                    <div class="text-xl text-white w-2/3 text-justify mt-8">
+                        <pre class="whitespace-pre-line">Currently enrolled at Bulacan State University (BulSU) as a Bachelor of Science in Information Technology student.
+                            <br>
+                            Since I became interested in technology, I've become more enthusiastic about writing code and developing applications, whether for mobile or web. Because of my interest in programming, I became a member of the Microsoft Learn Student Ambassador program (Beta), which has helped me grow as a developer and as a person. It help me communicate to other people and help me boost my confidence speaking and explaining to other.
+    
+                            I'm the kind of developer that doesn't stop at writing code. Making the code more readable and efficient is what I prefer. Since I hate being a burden to others, I always keep on learning new things. Because I want my teammate to feel at ease working with me</pre>
+                    </div>
+    
+                    <img src="./assets/transparent.png" class=" w-72 h-72 object-contain ml-5 floating transparent rounded-full border border-red-400" alt="">
+                </div>
+            
+        
+            </div>
+            <div id="project-tab" class=""></div>
+            <div id="skill-tab" class=""></div>
+            <div id="contact-tab" class=""></div>
         </main>
     </div>
 
